@@ -1,11 +1,8 @@
 # FLUX.1-dev Fine-Tuning for Personalized Image Generation
 
-This repository provides a modular implementation of FLUX.1-dev fine-tuning for personalized image generation using Tıktık xanım imagery. Tıktık xanım is a beloved Azerbaijani fairy-tale heroine, and this repo keeps the whole fine-tuning workflow reusable: prompt embedding generation, DreamBooth-style LoRA training, inference, merging, and Hugging Face Hub upload, all under `src/flux_ft`.
+This repository provides a modular implementation of FLUX.1-dev fine-tuning for personalized image generation using Tıktık xanım imagery and keeps the whole fine-tuning workflow reusable under `src/flux_ft`.
 
-Training was performed on an NVIDIA H100 GPU using a small custom dataset consisting of 13 annotated samples.
-Each sample includes a single frame of Tık-tık khanum, a descriptive text prompt and consistent character portrayal (pose, expression, style)
-
-The dataset was intentionally kept compact to evaluate how well FLUX.1-dev adapts to a character with minimal training examples.
+Training was performed on an NVIDIA H100 GPU using a small custom dataset consisting of 13 annotated samples. The dataset was intentionally kept compact to evaluate how well FLUX.1-dev adapts to a character with minimal training examples.
 
 <img width="1365" height="726" alt="Image" src="https://github.com/user-attachments/assets/7323f328-7e47-424f-81d2-61d14d6af5bc" />
 
@@ -69,16 +66,15 @@ python -m flux_ft.hf_upload \
 ---
 Below are the exact prompts used and sample images generated from the fine-tuned FLUX.1-dev LoRA.
 
-*Tık-tık khanum standing on a busy city street, looking around with a relaxed smile as people walk and cars pass by behind her.*
-
-<img width="512" height="768" alt="Image" src="https://github.com/user-attachments/assets/49cbc62e-6e8a-404d-81e4-8e3acb526126" />
-
-<br><br>
-
 *Tık-tık khanum standing among plants, holding a small glowing lantern in her hand, smiling confidently as she lights her surroundings.*
 
 <img width="512" height="768" alt="Image" src="https://github.com/user-attachments/assets/03c3d767-430f-4d07-8811-554e90661d79" />
 
+<br><br>
+
+*Tık-tık khanum standing on a busy city street, looking around with a relaxed smile as people walk and cars pass by behind her.*
+
+<img width="512" height="768" alt="Image" src="https://github.com/user-attachments/assets/49cbc62e-6e8a-404d-81e4-8e3acb526126" />
 <br><br>
 
 *Tık-tık khanum kneeling near a small campfire, warming her hands while watching the flames with a calm and thoughtful expression.*
