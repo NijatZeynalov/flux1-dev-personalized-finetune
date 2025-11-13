@@ -1,19 +1,8 @@
-# Flux Tıktık Xanım LoRA Project
+# FLUX.1-dev Fine-Tuning for Personalized Image Generation
 
-This repository packages the Colab notebook you used for fine-tuning **FLUX** on Tıktık xanım imagery into reusable Python modules. Tıktık xanım is a beloved Azerbaijani nağıl qəhramanı (fairy-tale heroine), and this repo keeps the whole fine-tuning workflow reusable: prompt embedding generation, DreamBooth-style LoRA training, inference, merging, and Hugging Face Hub upload, all under `src/flux_ft`.
+This repository provides a modular implementation of FLUX.1-dev fine-tuning for personalized image generation using Tıktık xanım imagery. Tıktık xanım is a beloved Azerbaijani fairy-tale heroine, and this repo keeps the whole fine-tuning workflow reusable: prompt embedding generation, DreamBooth-style LoRA training, inference, merging, and Hugging Face Hub upload, all under `src/flux_ft`.
 
-> **Heads up:** the scripts are meant to be executed manually when you are ready. This conversion did not run any training or inference code.
-
-## Project Layout
-
-```
-src/flux_ft/
-|-- embeddings.py   # Generate prompt embeddings and serialize them to Parquet
-|-- dataset.py      # DreamBooth dataset + collate_fn utilities
-|-- training.py     # LoRA fine-tuning loop
-|-- inference.py    # Inference & adapter fusion helpers
-`-- hf_upload.py    # Push trained adapters to Hugging Face Hub
-```
+Training was performed on an NVIDIA H100 GPU.
 
 ## Installation
 
@@ -72,5 +61,23 @@ python -m flux_ft.hf_upload \
   --repo-id nijatzeynalov/tik_tik_xanim_qlora_flux \
   --folder-path tiktik_flux_lora
 ```
+---
+Below are the exact prompts used and sample images generated from the fine-tuned FLUX.1-dev LoRA.
+
+*Tık-tık khanum standing on a busy city street, looking around with a relaxed smile as people walk and cars pass by behind her.*
+<img width="512" height="768" alt="Image" src="https://github.com/user-attachments/assets/49cbc62e-6e8a-404d-81e4-8e3acb526126" />
+
+<br><br>
+
+*Tık-tık khanum standing among plants, holding a small glowing lantern in her hand, smiling confidently as she lights her surroundings.*
+<img width="512" height="768" alt="Image" src="https://github.com/user-attachments/assets/03c3d767-430f-4d07-8811-554e90661d79" />
+
+<br><br>
+
+*Tık-tık khanum kneeling near a small campfire, warming her hands while watching the flames with a calm and thoughtful expression.*
+
+<img width="512" height="768" alt="Image" src="https://github.com/user-attachments/assets/fcecf106-24e1-4c87-a8f4-0f843508f5a9" />
+
+---
 
 Each CLI exposes `--help` with every tunable flag from the original notebook so you can reproduce or customize the workflow without touching the code again.
