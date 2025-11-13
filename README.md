@@ -87,4 +87,4 @@ Below are the exact prompts used and sample images generated from the fine-tuned
 
 ---
 
-Each CLI exposes `--help` with every tunable flag from the original notebook so you can reproduce or customize the workflow without touching the code again.
+Each CLI exposes `--help` with every tunable flag so you can reproduce or customize the workflow.
