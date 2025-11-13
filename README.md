@@ -65,11 +65,13 @@ python -m flux_ft.hf_upload \
 Below are the exact prompts used and sample images generated from the fine-tuned FLUX.1-dev LoRA.
 
 *Tık-tık khanum standing on a busy city street, looking around with a relaxed smile as people walk and cars pass by behind her.*
+
 <img width="512" height="768" alt="Image" src="https://github.com/user-attachments/assets/49cbc62e-6e8a-404d-81e4-8e3acb526126" />
 
 <br><br>
 
 *Tık-tık khanum standing among plants, holding a small glowing lantern in her hand, smiling confidently as she lights her surroundings.*
+
 <img width="512" height="768" alt="Image" src="https://github.com/user-attachments/assets/03c3d767-430f-4d07-8811-554e90661d79" />
 
 <br><br>
