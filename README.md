@@ -2,7 +2,12 @@
 
 This repository provides a modular implementation of FLUX.1-dev fine-tuning for personalized image generation using Tıktık xanım imagery. Tıktık xanım is a beloved Azerbaijani fairy-tale heroine, and this repo keeps the whole fine-tuning workflow reusable: prompt embedding generation, DreamBooth-style LoRA training, inference, merging, and Hugging Face Hub upload, all under `src/flux_ft`.
 
-Training was performed on an NVIDIA H100 GPU.
+Training was performed on an NVIDIA H100 GPU using a small custom dataset consisting of 13 annotated samples.
+Each sample includes a single frame of Tık-tık khanum, a descriptive text prompt and consistent character portrayal (pose, expression, style)
+
+The dataset was intentionally kept compact to evaluate how well FLUX.1-dev adapts to a character with minimal training examples.
+
+<img width="1365" height="726" alt="Image" src="https://github.com/user-attachments/assets/7323f328-7e47-424f-81d2-61d14d6af5bc" />
 
 ## Installation
 
